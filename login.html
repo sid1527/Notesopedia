@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+		<div class="title">
+			<img src="logo.png" alt="logo">
+			<h2>NOTESOPEDIA</h2>
+		</div>
+
+		<div class="login">
+			<form class="login" action="login.php" method="get">
+				<a href="login.php"><button type="submit" class="login">LOGIN</button></a>
+			</form>
+		</div>
+
+		<div class="about">
+			<br><br><br><br>
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+  					<div class="numbertext">1 / 3</div>
+  					<img src="main.jpg" style="width:100%; height:300px">
+  					<div class="text">Caption Text</div>
+				</div>
+
+				<div class="mySlides fade">
+  					<div class="numbertext">2 / 3</div>
+  					<img src="logo.png" style="width:100%; height:300px">
+  					<div class="text">Caption Two</div>
+				</div>
+
+				<div class="mySlides fade">
+  					<div class="numbertext">3 / 3</div>
+  					<img src="notes1.jpg" style="width:100% ;height:300px">
+  					<div class="text">Caption Three</div>
+				</div>
+
+			</div>
+			<br>
+
+			<div style="text-align:center">
+  				<span class="dot"></span> 
+  				<span class="dot"></span> 
+  				<span class="dot"></span> 
+			</div>
+			<p><i><b><u>NOTESOPEDIA</u></b></i> is a web based notes sharing and management system which helps students and teachers to share their notes online effectively. It reduces the wasting of time in manually distributing notes to each individual. It greatly overcomes the lack of availability and converts the manual old school paperwork to a fully automated and managed online system.</p> 
+
+			<p><i><b><u>NOTESOPEDIA</u></b></i> allows it's users to securely register and log in to their individual accounts and create, read , update, delete notes according to their needs. It provides notes to everyone in a very secure manner. Multiple users can work in this system at the same time under centralized supervision by administrator. It is a very useful notes management system for Colleges, Schools and other Institutes to manage and share their notes in an secure, efficient and effective manner.</p>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+		</div>
+
+
+		<div class="form">
+			<h2 class="form">REGISTRATION FORM :</h2>
+			<form>
+
+				<input type="text" name="name" placeholder="   NAME*" required="required" >
+				<input type="text" name="email" placeholder="   E - MAIL*" required="required">
+				<input type="number" name="number" placeholder="   NUMBER*" required="required" maxlength="10" minlength="10">
+				<input type="password" name="pass" placeholder="   PASSWORD*" required="required">
+				<input type="password" name="cpass" placeholder="   CONFIRM PASSWORD*" required="required">
+				<input type="DATE" name="dob" placeholder="   DATE OF BIRTH">
+				<fieldset><legend>GENDER</legend>
+					<input type="radio" name="gender" id="male">MALE
+					<input type="radio" name="gender" id="female">FEMALE
+					<input type="radio" name="gender" id="other">OTHER
+				</fieldset>
+
+				<input type="submit" name="submit">
+				<input type="reset" name="reset">
+
+			</form>
+		</div>
+
+</body>
+</html>
